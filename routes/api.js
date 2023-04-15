@@ -16,7 +16,7 @@ module.exports = function (app) {
       }
       const row = coordinate.split("")[0];
       const column = coordinate.split("")[1];
-      if (coordinate.length !== 2 || !/[a-i]/i.test(row) || !/[1-9]/i.test(column)) {
+      if (coordinate.length !== 2 || !/^[a-i]$/i.test(row) || !/^[1-9]$/i.test(column)) {
         res.json({ error: "Invalid coordinate" });
         return;
       }
